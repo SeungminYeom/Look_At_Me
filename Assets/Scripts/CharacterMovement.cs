@@ -21,12 +21,12 @@ public class CharacterMovement : MonoBehaviour
 
     Rigidbody playerRigid;
 
-    GameObject playerCamera;
+    //GameObject playerCamera;
 
     void Start()
     {
         playerRigid = GetComponent<Rigidbody>();
-        playerCamera = GameObject.Find("CameraArm").gameObject;
+        //playerCamera = GameObject.Find("CameraArm").gameObject;
     }
 
     void Update()
@@ -52,6 +52,7 @@ public class CharacterMovement : MonoBehaviour
 
         //transform.rotation = Quaternion.Euler(new Vector3(0, playerCamera.transform.eulerAngles.y, 0));
         
+        /*
         if (Mathf.Abs(transform.eulerAngles.y - playerCamera.transform.eulerAngles.y) < 10)
         {
             transform.rotation = Quaternion.Euler(0, playerCamera.transform.eulerAngles.y, 0);
@@ -60,6 +61,7 @@ public class CharacterMovement : MonoBehaviour
         {
             transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(new Vector3(0, playerCamera.transform.eulerAngles.y, 0)), 0.2f);
         }
+        */
 
         Vector3 velocity = new Vector3(xAxis, 0, zAxis);
 
